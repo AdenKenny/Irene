@@ -1,0 +1,52 @@
+{
+  "name": "irene",
+  "version": "1.0.0",
+  "homepage": "https://adenkenny.github.io/Irene/",
+  "private": true,
+  "dependencies": {
+    "@types/d3": "^5.0.0",
+    "anova": "^1.0.2",
+    "brown-forsythe-test": "^1.0.0",
+    "compute-divide": "^2.0.0",
+    "compute-roundn": "^1.0.3",
+    "compute-sum": "^2.0.0",
+    "compute-variance": "^3.0.0",
+    "d3": "^5.6.0",
+    "d3-jetpack": "^2.0.19",
+    "d3-scale": "^2.1.0",
+    "d3-voronoi": "^1.1.2",
+    "firebase": "^5.3.1",
+    "jStat": "^1.7.1",
+    "jerzy": "^0.2.1",
+    "levene-test": "^1.0.2",
+    "prop-types": "^15.6.2",
+    "radar-chart-d3": "^1.2.0",
+    "react": "^16.4.2",
+    "react-d3": "^0.4.0",
+    "react-d3-basic": "^1.6.11",
+    "react-d3-components": "^0.9.1",
+    "react-d3-core": "^1.3.9",
+    "react-d3-radar": "^0.2.6",
+    "react-d3-zoom": "^1.1.2",
+    "react-dom": "^16.4.2",
+    "react-scripts-ts": "^2.17.0",
+    "webpack": "^4.16.5",
+    "yarn": "^1.9.4"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/node": "^10.5.7",
+    "@types/react": "^16.4.8",
+    "@types/react-dom": "^16.0.7",
+    "typescript": "^3.0.1"
+  }
+}

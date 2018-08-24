@@ -1,0 +1,8 @@
+.Label {
+    font-size: 2em;
+}
+
+.Label.y {
+    transform: rotate(-90deg);
+    text-anchor: middle;
+}

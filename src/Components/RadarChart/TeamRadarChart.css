@@ -1,0 +1,101 @@
+.NameButton {
+    width: 100%;
+}
+
+.KeysBox {
+    padding: 7px;
+    width: 300px;
+    display: block;
+    padding-left: 75px;
+    float: left;
+    height: 500px;
+}
+
+.Chart {
+    float: left;
+    width: 500px;
+    height: 500px;
+}
+
+
+.NameButton { 
+    padding: 3px;
+    width: 100%;
+    border-color: black;
+    border-width: 1px;
+    background: #171817;
+    color: white;
+}
+
+.KeysBox button:hover {
+    background-color: #3A3A3A;
+}
+
+
+.WithButtons {
+    width: 800px;
+    height: 500px;
+    padding-bottom: 60px;
+    margin: auto;
+}
+
+.Clear {
+    clear: both;
+}
+
+.Header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popup {
+    position: fixed;
+    display: inline-block;
+    cursor: pointer;
+    left: 100px;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
