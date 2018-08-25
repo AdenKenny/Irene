@@ -1,11 +1,17 @@
-**Directions**
+**Installation**
 
-cd to the project directory
+$ cd Irene
 
-To install node modules: "yarn install"
+$ yarn install
 
-When that has completed: "yarn start"
+$ yarn start
 
+
+**Or** 
+
+Vist - https://adenkenny.github.io/Irene/
+
+****
 
 You can view visualisations and other information by asking questions by typing
 in the text input field.
