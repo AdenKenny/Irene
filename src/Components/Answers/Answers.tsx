@@ -1,5 +1,4 @@
 import React from 'react';
-import ParseData from '../../Util/ParseData';
 import FadeText from '../FadeText/FadeText';
 
 import './Answers.css';

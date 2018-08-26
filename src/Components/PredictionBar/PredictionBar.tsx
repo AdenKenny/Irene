@@ -5,7 +5,6 @@ import Prediction from '../Prediction/Prediction';
 class PredictionBar extends React.Component<{}, {inputValue: string}> {
 
     private parent: Prediction;
-    private field;
 
     constructor(props, state) {
         super(props, state);

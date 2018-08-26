@@ -1,5 +1,5 @@
 import App from '../App';
-import Table from './Table'
+import Table from './Table';
 
 class ParseData {
     

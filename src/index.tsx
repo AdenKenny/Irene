@@ -4,9 +4,6 @@ import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
-import ParseData from './Util/ParseData';
-import MainPage from './MainPage';
-
 ReactDOM.render(
   <App />,
   document.getElementById('root') as HTMLElement

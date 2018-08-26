@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { scaleLinear } from 'd3-scale';
-import { interpolateLab } from 'd3-interpolate';
 
 export default class Bars extends Component<{maxValue, scales, margins, data, svgDimensions}> {
 

@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ListItem from '../ListItem/ListItem';
-import PredictionBar from '../PredictionBar/PredictionBar';
 import Prediction from '../Prediction/Prediction';
 
 class List extends React.Component<{}, {active: number}> {

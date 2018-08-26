@@ -1,9 +1,6 @@
 import * as d3 from 'd3';
 import * as React from 'react';
 import { Component } from 'react';
-import * as Chart from 'react-d3-core';
-import * as LineChart from 'react-d3-basic';
-import ParseData from '../../Util/ParseData';
 
 import './TheLineChart.css';
 
@@ -53,7 +50,7 @@ class TheLineChart extends Component<{ data }> {
                 return false;
             });
             return thePosition;
-        };
+        }
 
         let teams = rawData[0].getRows().map(function (d, index) {
             return d.name;
@@ -102,20 +99,19 @@ class TheLineChart extends Component<{ data }> {
         const team = g.selectAll(".team")
             .data(data)
             .enter().append("g")
-            .attr("class", "team")
+            .attr("class", "team");
 
         team.append("path")
             .attr("class", "line")
             .attr("fill", "none")
             .attr("d", function (d) { return line(d.position); })
-            .on("click", function(item){
-                const sel = d3.select(this);
+            .on("click", function (item) {
             })
-            .on("mouseover",function(item){
+            .on("mouseover", function (item) {
                 const sel = d3.select(this);
                 sel.style("stroke-width", "5");
             })
-            .on("mouseout",function(item){
+            .on("mouseout", function (item) {
                 const sel = d3.select(this);
                 sel.style("stroke-width", "3");
             })
@@ -142,7 +138,7 @@ class TheLineChart extends Component<{ data }> {
         svg.append("text")
             .attr("class", "x label")
             .attr("text-anchor", "end")
-            .attr("x", (width  - margins.left) / 2)
+            .attr("x", (width - margins.left) / 2)
             .attr("y", height - 8)
             .text("Round");
 
@@ -161,7 +157,7 @@ class TheLineChart extends Component<{ data }> {
 
         return (
             <div className="LineChart" ref={el => { this.chartElement = el; }}></div>
-        )
+        );
 
     }
 }

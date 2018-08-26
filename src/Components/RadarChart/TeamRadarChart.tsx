@@ -1,10 +1,8 @@
 import { Component } from "react";
 import * as React from 'react';
-import * as d3 from 'd3';
 import Radar from 'react-d3-radar';
 
 import './TeamRadarChart.css';
-import App from "../../App";
 import Tooltip from "src/Components/Tooltip/Tooltip";
 
 class TeamRadarChart extends Component<{data, country}> {
@@ -121,7 +119,6 @@ class TeamRadarChart extends Component<{data, country}> {
         }
 
         else { // If we're dealing with teams.
-            const teams: string[] = App.teams;
 
             const k = this.props.data; // Lets mutate.
             
@@ -211,7 +208,7 @@ class TeamRadarChart extends Component<{data, country}> {
         this.finalData = newData; // Set the data.
 
         this.els = array.map((a, i) => { // Create the buttons.
-            return (<button key={i} type="button" className="NameButton" onClick={() => { this.redoData(a) }}>{a}</button>);
+            return (<button key={i} type="button" className="NameButton" onClick={() => { this.redoData(a); }}>{a}</button>);
         });
 
         return (
@@ -220,7 +217,7 @@ class TeamRadarChart extends Component<{data, country}> {
                     <Tooltip ref={child => {if (child !== null) {this.tooltip = child;}}}/>
                     <div
                         ref={child => {if (child !== null) {this.radar = child;}}}
-                        onMouseEnter={() => {if (this.current !== undefined) {this.tooltip.setState({visible: true})}}}
+                        onMouseEnter={() => {if (this.current !== undefined) {this.tooltip.setState({visible: true});}}}
                         onMouseLeave={() => {this.tooltip.setState({visible: false});}}
                     >
                         <Radar
@@ -261,7 +258,7 @@ class TeamRadarChart extends Component<{data, country}> {
                 </div>
                 <div className="Clear"></div>
             </div>
-        )
+        );
     }
 }
 

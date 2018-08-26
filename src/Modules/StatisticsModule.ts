@@ -112,16 +112,9 @@ class StatisticsModule {
     static brownForsythe(samples: number[][]) {
 
         if (StatisticsModule.checkData(samples)) {
-            const alpha: number = 0.05; // Our alpha value.
         
             const df1 = samples.length - 1;
-            
-            let df2: number = 0; // The count of all cases.
-    
-            samples.forEach(e => { // Count total cases.
-                df2 += e.length;
-            });
-    
+                
             const stat: number = bf.test(samples);
     
             const pVal: number = 1 - jStat.chisquare.cdf(stat, df1); // Get our p value;
@@ -143,12 +136,12 @@ class StatisticsModule {
                     for (let j = 0, len = arr.length; j < len; ++j) {
                         const e: number = arr[j];
 
-                        if (j === null) { // Make sure data value is not null.
+                        if (e === null) { // Make sure data value is not null.
                             return false;
                         }
 
                         else {
-                            if (isNaN(j)) { // Make sure data value is not NaN.
+                            if (isNaN(e)) { // Make sure data value is not NaN.
                                 return false;
                             }
                         }

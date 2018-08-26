@@ -46,7 +46,7 @@ class DatabaseModule {
                 });
                 years.set(year.key, games); // Put the games in that year in the map.
             });
-        }).then(() => {return years});
+        }).then(() => {return years;});
     }
 }
 

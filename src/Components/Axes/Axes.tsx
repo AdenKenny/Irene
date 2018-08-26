@@ -24,4 +24,4 @@ export default ({ scales, margins, svgDimensions }) => {
       <Axis {...yProps} />
     </g>
   );
-}
+};

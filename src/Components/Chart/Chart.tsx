@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { scaleBand, scaleLinear } from 'd3-scale'
+import React, { Component } from 'react';
+import { scaleBand, scaleLinear } from 'd3-scale';
 
 import Axes from '../Axes/Axes';
 import Bars from '../Bars/Bars';
@@ -38,9 +38,7 @@ class Chart extends Component<{data: {name, played, won}[]}> {
             .domain(data.map(d => d.name))
             .range([margins.left, svgDimensions.width - margins.right]);
 
-        const yScale = this.yScale
-            .domain([0, maxValue])
-            .range([svgDimensions.height - margins.bottom, margins.top]);
+        const yScale = this.yScale.domain([0, maxValue]).range([svgDimensions.height - margins.bottom, margins.top]);
 
         return (
             <div>

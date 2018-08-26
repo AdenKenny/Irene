@@ -1,11 +1,9 @@
 import React from 'react';
-import { scaleBand, scaleLinear } from 'd3-scale';
 import List from '../List/List';
 import App from '../../App';
 import PredictionBar from '../PredictionBar/PredictionBar';
 import FinalPrediction from './FinalPrediction';
 import PredictionOption from './PredictionOption';
-import MainPage from '../../MainPage';
 import Answers from '../Answers/Answers';
 import ParseData from '../../Util/ParseData';
 import Chart from '../Chart/Chart';
@@ -166,9 +164,10 @@ class Prediction extends React.Component {
                         }
                         return false;
                     });
-                    if (found === false) {
+
+                    if (!found) {
                         problem = true;
-                        return true;;
+                        return true;
                     }
                 }
                 else if (s === "round") {
@@ -182,7 +181,7 @@ class Prediction extends React.Component {
                         }
                         return false;
                     });
-                    if (found === false) {
+                    if (!found) {
                         problem = true;
                         return true;
                     }
@@ -196,7 +195,7 @@ class Prediction extends React.Component {
                             found = true;
                         }
                     });
-                    if (found === false) {
+                    if (!found) {
                         problem = true;
                         return true;
                     }
@@ -212,7 +211,7 @@ class Prediction extends React.Component {
                 }
                 return false;
             });
-            if (problem === false) {
+            if (!problem) {
                 func(prediction, teams, rounds, years);
                 finished = true;
             }
@@ -310,8 +309,6 @@ class Prediction extends React.Component {
         console.log(data);
 
         const datum = Array.from(data.values());
-
-        const allYears : number[] = Array.from(data.keys()).map(Number);
 
         this.answers.setElement(
             <div>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './Tooltip.css'
+import './Tooltip.css';
 
 export default class Tooltip extends React.Component<{}, {visible, lines, x, y}> {
 
-    public isOver; // Is over an element?
+    public isOver: boolean; // Is over an element?
 
     constructor(props, state) {
         super(props, state);
@@ -13,7 +13,7 @@ export default class Tooltip extends React.Component<{}, {visible, lines, x, y}>
             lines: [],
             x: 0,
             y: 0
-        }
+        };
 
         this.enter = this.enter.bind(this); // Entered an element.
         this.leave = this.leave.bind(this); // Left an element.
@@ -23,11 +23,13 @@ export default class Tooltip extends React.Component<{}, {visible, lines, x, y}>
         if (this.state.visible === false) {
             return (<div></div>);
         }
+
         const lines = this.state.lines.map((line, i) => {
             return (
                 <div key={i}>{line}<br/></div>
             );
-        })
+        });
+
         return (
             <div className="tooltip" onMouseEnter={this.enter} onMouseLeave={this.leave}>
                 <style>{"\

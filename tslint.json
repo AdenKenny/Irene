@@ -1,5 +1,11 @@
 {
-  "rules":{
+  "rules": {
+    "no-duplicate-variable": true,
+    "no-inferrable-types": false,
+    "no-magic-numbers": false,
+    "no-unused-variable": [
+      true, "always"
+    ],
+    "semicolon": [true, "always"]
   }
 }
-

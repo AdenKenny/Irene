@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 class ListItem extends React.Component<{className: string, onClick: any, value:string}> {
 
